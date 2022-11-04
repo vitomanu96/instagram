@@ -1,12 +1,17 @@
+
+var UImage= document.createElement(Image) 
+UImage.src= "./imgs/gundam logo.jpg";
+
+
 const post = {
-    userImage: '',
+    userImage: UImage,
     userName: 'Giacomo bazzano',
-    postImage: '',
+    postImage:'./imgs/Mobile_Suit_Gundam.jpg',
     like: true,
     comments: [{
-        userImage: '',
-        userName: '',
-        text: ''
+        userImage: './img/UsrImgBot1.jpg',
+        userName: 'bot1',
+        text: 'nice img, love it'
     }],
     likes: ['vitomanu', 'giacomobaz'],
     createDate: '1664812347283'

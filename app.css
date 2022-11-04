@@ -34,12 +34,65 @@
 
 .flex-posts{
   display:flex;
-  flex-flow: row wrap;
-  justify-content: center;
-
-  padding-bottom: 15200px;
-  gap: 10px;
-  row-gap: 20px;
-  column-gap: 30px;
+  flex-flow: column;
+  
+  column-gap: 100px;
 }
 
+.flex-upperFunctions{
+  display:flex;
+flex-flow: row;
+gap: 240px;
+}
+
+.flex-userPostSx{
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.flex-userPostDx{
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.flex-postImg{
+  display: flex;
+  flex-flow: column;
+  column-gap: 10px;
+}
+
+.flex-downsideFunctions{
+  display: flex;
+  flex-flow: row;
+  gap: 260px;
+}
+
+.flex-postFunctionSx{
+  display: flex;
+  flex-flow: row;
+justify-content: flex-start;
+gap: 10px;
+}
+
+.flex-postFunctionDx{
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.flex-postLikes{
+  display: flex;
+  flex-flow: row wrap;
+  
+}
+
+.flex-postComments{
+  display: flex;
+  flex-flow: row wrap;
+
+}
