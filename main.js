@@ -1,11 +1,8 @@
 
-var UImage= document.createElement(Image) 
-UImage.src= "./imgs/gundam logo.jpg";
-
 
 const post = {
-    userImage: UImage,
-    userName: 'Giacomo bazzano',
+    userImage: "./imgs/gundam logo.jpg",
+    userName: 'Vito Manuguerra',
     postImage:'./imgs/Mobile_Suit_Gundam.jpg',
     like: true,
     comments: [{
@@ -25,6 +22,13 @@ function handleClickLike() {
     likeSvg.style.fill = post.like ? '#FF0000' : '#000000'
 }
 
+const handleClickLikeBind = () => {
+    // toogle like
+    post.like = !post.like // !true
+    const likeSvg = document.getElementById('like')
+    likeSvg.style.fill = post.like ? '#FF0000' : '#000000'
+}
+
 
 window.addEventListener('load', (event) => {
     console.log('page is fully loaded', new Date().getTime())
@@ -32,9 +36,11 @@ window.addEventListener('load', (event) => {
 
     const usernameDiv = document.getElementById('username')
     const likeSvg = document.getElementById('like')
+    const imgProfile = document.getElementById('imgProfile')
     console.log(usernameDiv, new Date().getTime())
     console.log('likeSvg', likeSvg)
     usernameDiv.textContent = post.userName
+    imgProfile.src = post.userImage
 
     likeSvg.style.fill = post.like ? '#FF0000' : '#000000'
 /*
@@ -43,8 +49,6 @@ window.addEventListener('load', (event) => {
     } else {
         likeSvg.color = 'black'
     }*/
-
-
 })
 
 
