@@ -1,88 +1,43 @@
-const posts = [
-    {
-        id: 1,
-        userImage: './imgs/gundam logo.jpg',
-        userName: 'Vito Manuguerra1',
-        postImage: './imgs/Mobile_Suit_Gundam.jpg',
-        like: true,
-        comments: [{
-            userImage: './img/UsrImgBot1.jpg',
-            userName: 'bot12',
-            text: 'nice img, love it2'
-        }],
-        likes: ['vitomanu', 'giacomobaz'],
-        createDate: '1664812347283'
-    },
-    {
-        id: 2,
-        userImage: './imgs/gundam logo4.jpg',
-        userName: 'Vito Manuguerra2',
-        postImage: './imgs/Mobile_Suit_Gundam.jpg',
-        like: false,
-        comments: [{
-            userImage: './img/UsrImgBot1.jpg',
-            userName: 'bot12',
-            text: 'nice img, love it3'
-        }],
-        likes: ['vitomanu', 'giacomobaz'],
-        createDate: '1664812347283'
-    }
-]
+const posts = [{
+	userImage: './imgs/gundam logo.jpg',
+	userName: 'Giacomo Bazzano',
+	postImage: './imgs/Mobile_Suit_Gundam.jpg',
+	like: true,
+	comments: [ {
+		userImageC: './imgs/UsrImgBot1.png',
+		userNameC: 'Bot1',
+		text: 'Nice one'
+	}],
+	likes: ['vitomanu','giacomobaz'],
+	createDate: '1664812347283'
+},
 
-// @giaco interazione con il like svg
-function handleClickLike() {
-    // toogle like
-    post.like = !post.like // !true
-    const likeSvg = document.getElementById('like')
-    likeSvg.style.fill = post.like ? '#FF0000' : '#000000'
+{
+	userImage2: './imgs/2.jpg',
+	userName2: 'Post Bot 2',
+	postImage2: './imgs/woods.jpg',
+	like2: true,
+	comments2: [ {
+		userImageC2: './imgs/Bot 2.png',
+		userNameC2: 'Bot2',
+		text2: 'Nice one'
+	}],
+	likes: ['vitomanu','giacomobaz'],
+	createDate: '1664812347283'
+},
+
+{
+	userImage3: './imgs/3.jpg',
+	userName3: 'Post Bot 3',
+	postImage3: './imgs/snowoods.jpg',
+	like3: true,
+	comments3: [ {
+		userImageC3: './imgs/Bot 3.png',
+		userNameC3: 'Bot3',
+		text3: 'Nice one'
+	}],
+	likes: ['vitomanu','giacomobaz'],
+	createDate: '1664812347283'
 }
-
-const handleClickLikeBind = () => {
-    // toogle like
-    post.like = !post.like // !true
-    const likeSvg = document.getElementById('like')
-    likeSvg.style.fill = post.like ? '#FF0000' : '#000000'
-}
-
-
-window.addEventListener('load', (event) => {
-    console.log('page is fully loaded', new Date().getTime())
-    console.log('Start instagram')
-
-    posts.forEach(post => {
-        // todo creare il post completo con JS
-        const postHtml = document.createElement('article')
-        postHtml.className = 'flex-posts'
-        postHtml.id = post.id
-        document.querySelector('#imgProfile1')
-        const postHeader = document.createElement('div')
-        const imgHeader = document.createElement('img')
-        imgHeader.id = 'imgProfile' + post.id
-        imgHeader.src = post.userImage
-        postHeader.appendChild(imgHeader)
-        postHeader.className = 'flex-upperFunctions'
-        postHtml.appendChild(postHeader)
-
-        document.getElementById("posts-container").appendChild(postHtml)
-    })
-
-    /*const usernameDiv = document.getElementById('username')
-    const likeSvg = document.getElementById('like')
-    const imgProfile = document.getElementById('imgProfile')
-    console.log(usernameDiv, new Date().getTime())
-    console.log('likeSvg', likeSvg)
-    usernameDiv.textContent = post.userName
-    imgProfile.src = post.userImage
-
-    likeSvg.style.fill = post.like ? '#FF0000' : '#000000'*/
-    /*
-        if (post.like) {
-            likeSvg.color = 'red'
-        } else {
-            likeSvg.color = 'black'
-        }*/
-})
-
-
-
+];
 
