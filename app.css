@@ -1,3 +1,32 @@
+.post-container {
+    display: flex;
+    flex-direction: column;
+    column-gap: 30px
+}
+
+.article-post {
+    width: 400px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.body-post {
+
+}
+
+.footer-post {
+
+}
+
+.header-post {
+
+}
+
+.img-body-post {
+    width: 400px;
+}
+
+/*
 .flex-container {
   display: flex;
   flex-flow: row wrap;
@@ -35,7 +64,7 @@
 .flex-posts{
   display:flex;
   flex-flow: column;
-  
+
   column-gap: 100px;
 }
 
@@ -88,11 +117,11 @@ gap: 10px;
 .flex-postLikes{
   display: flex;
   flex-flow: row wrap;
-  
+
 }
 
 .flex-postComments{
   display: flex;
   flex-flow: row wrap;
 
-}
+}*/
