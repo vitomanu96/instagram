@@ -11,19 +11,38 @@
 }
 
 .body-post {
-
+  width: 400px;
+  border: 1px solid black;
+    
 }
 
 .footer-post {
-
+display: flex;
+flex-direction: column;
+column-gap: 20px;
 }
 
 .header-post {
+  display: flex;
+  flex-direction: row;
+  row-gap: 10px;
 
+}
+
+.imgProfile{
+  height: 16px;
+  width: 16px;
 }
 
 .img-body-post {
     width: 400px;
+    
+}
+
+.post-Function{
+  display: flex;
+  flex-direction: row;
+  row-gap: 10px;
 }
 
 /*

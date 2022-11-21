@@ -22,7 +22,7 @@ const posts = [
         comments2: [{
             userImageC: './imgs/Bot 2.png',
             userNameC: 'Bot2',
-            text2: 'Nice one'
+            text: 'Nice one'
         }],
         likes: ['vitomanu', 'giacomobaz'],
         createDate: '1664812347283'
@@ -36,10 +36,9 @@ const posts = [
         comments: [{
             userImageC: './imgs/Bot 3.png',
             userNameC: 'Bot3',
-            text3: 'Nice one'
+            text: 'Nice one'
         }],
         likes: ['vitomanu', 'giacomobaz'],
         createDate: '1664812347283'
     }
 ]
-

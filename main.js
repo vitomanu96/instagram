@@ -5,12 +5,13 @@ const posts = [
         userName: 'Giacomo Bazzano',
         postImage: './imgs/Mobile_Suit_Gundam.jpg',
         like: true,
+        likes: ['vitomanu', 'giacomobaz'],
         comments: [{
             userImageC: './imgs/UsrImgBot1.png',
             userNameC: 'Bot1',
             text: 'Nice one'
         }],
-        likes: ['vitomanu', 'giacomobaz'],
+        
         createDate: '1664812347283'
     },
     {
@@ -19,12 +20,13 @@ const posts = [
         userName: 'Post Bot 2',
         postImage: './imgs/woods.jpg',
         like: false,
+        likes: ['vitomanu', 'giacomobaz'],
         comments2: [{
             userImageC: './imgs/Bot 2.png',
             userNameC: 'Bot2',
             text2: 'Nice one'
         }],
-        likes: ['vitomanu', 'giacomobaz'],
+        
         createDate: '1664812347283'
     },
     {
@@ -33,12 +35,13 @@ const posts = [
         userName: 'Post Bot 3',
         postImage: './imgs/snowoods.jpg',
         like: true,
+        likes: ['vitomanu', 'giacomobaz'],
         comments: [{
             userImageC: './imgs/Bot 3.png',
             userNameC: 'Bot3',
             text3: 'Nice one'
         }],
-        likes: ['vitomanu', 'giacomobaz'],
+        
         createDate: '1664812347283'
     }
 ]
@@ -52,6 +55,8 @@ function handleClickLike() {
     likeSvg.style.fill = post.like ? '#FF0000' : '#000000'
 }
 
+likeSvg = document.getElementById('like');
+
 // esercizio 1.1
 // 1.2 aggiungere la logica del like
 window.addEventListener('load', (event) => {
@@ -63,20 +68,73 @@ window.addEventListener('load', (event) => {
     const headerPost = document.createElement('div')
     headerPost.className = 'header-post'
 
+    //chiedere come invertire l'ordine di nome utente e immagine profilo utente 
+  /* const userProfImg = document.createElement('img')
+    userProfImg.className = 'imgProfile'
+    userProfImg.src = './imgs/gundam logo.jpg'
+    */
+
+
+
     const userNameElem = document.createElement('h4')
-    userNameElem.textContent = 'Vito'
+    userNameElem.textContent = 'Giacomo'
 
     /*TODO 1. aggiungere anche body-post e footer-post*/
 
+    const bodyPost = document.createElement('div')
+    bodyPost.className = 'body-post'
+
+    const postImg = document.createElement ('img')
+    postImg.className= 'img-body-post' 
+    postImg.src = './imgs/Mobile_Suit_Gundam.jpg'
+    
+
+    
+   
+    
+
+    const footerPost = document.createElement('div')
+    footerPost.className= 'footer-post'
+    
+//SVG CUORE
+    const postLikeFunction = document.createElement('svg')
+    
+    
+    const postLikes = document.createElement('h6')
+    postLikes.textContent = 'Piace a VitoManu, a GiacomoBazz e altri'
+
+    const postComment = document.createElement('h4')
+    postComment.textContent = 'VitoManu: WOW'
+
+    const postCommentS = document.createElement('h4')
+    postCommentS.textContent = 'Mostra altri commenti'
+
+
+
+// relativo ad immagine profilo userNameElem.appendChild(userProfImg)
     headerPost.appendChild(userNameElem)
+    
 
     article.appendChild(headerPost)
 
     const container = document.getElementById('posts-container')
+    
+    article.appendChild(bodyPost)
+    article.appendChild(footerPost)
 
-    container.appendChild(article)
+    bodyPost.appendChild(postImg)
+    
+        container.appendChild(article)
+    footerPost.appendChild(postLikeFunction)
+    footerPost.appendChild(postLikes)
 
+    postComment.appendChild(postCommentS)
+    postLikes.appendChild(postComment)
+    
+    
+    
 })
+
 
 // esercizio 2.1: creare lista di posts
 // 2.2 aggiungere il like
