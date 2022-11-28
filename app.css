@@ -16,6 +16,12 @@
     
 }
 
+.lowerSvg-container{
+  display: flex;
+  flex-direction: row;
+  row-gap: 10px;
+}
+
 .footer-post {
 display: flex;
 flex-direction: column;
@@ -25,11 +31,16 @@ column-gap: 20px;
 .header-post {
   display: flex;
   flex-direction: row;
-  row-gap: 10px;
+  row-gap: 50px;
 
 }
 
-.imgProfile{
+.img-Profile{
+  height: 16px;
+  width: 16px;
+}
+
+.cImg-Profile{
   height: 16px;
   width: 16px;
 }
@@ -43,6 +54,12 @@ column-gap: 20px;
   display: flex;
   flex-direction: row;
   row-gap: 10px;
+}
+
+.comment-container{
+  display: flex;
+  flex-direction: row;
+  row-gap: 40px;
 }
 
 /*

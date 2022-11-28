@@ -6,11 +6,11 @@ const posts = [
         postImage: './imgs/Mobile_Suit_Gundam.jpg',
         like: true,
         likes: ['vitomanu', 'giacomobaz'],
-        comments: [{
+        comments: {
             userImageC: './imgs/UsrImgBot1.png',
             userNameC: 'Bot1',
             text: 'Nice one'
-        }],
+        },
         
         createDate: '1664812347283'
     },
@@ -21,11 +21,11 @@ const posts = [
         postImage: './imgs/woods.jpg',
         like: false,
         likes: ['vitomanu', 'giacomobaz'],
-        comments2: [{
-            userImageC: './imgs/Bot 2.png',
+        comments: {
+            userImageC: './imgs/cUser2.png',
             userNameC: 'Bot2',
-            text2: 'Nice one'
-        }],
+            text: 'Nice one'
+        },
         
         createDate: '1664812347283'
     },
@@ -36,11 +36,11 @@ const posts = [
         postImage: './imgs/snowoods.jpg',
         like: true,
         likes: ['vitomanu', 'giacomobaz'],
-        comments: [{
-            userImageC: './imgs/Bot 3.png',
+        comments: {
+            userImageC: './imgs/cUser3.png',
             userNameC: 'Bot3',
-            text3: 'Nice one'
-        }],
+            text: 'Nice one'
+        },
         
         createDate: '1664812347283'
     }
@@ -57,6 +57,7 @@ function handleClickLike() {
 
 likeSvg = document.getElementById('like');
 
+/*
 // esercizio 1.1
 // 1.2 aggiungere la logica del like
 window.addEventListener('load', (event) => {
@@ -74,12 +75,12 @@ window.addEventListener('load', (event) => {
     userProfImg.src = './imgs/gundam logo.jpg'
     */
 
-
+/*
 
     const userNameElem = document.createElement('h4')
     userNameElem.textContent = 'Giacomo'
 
-    /*TODO 1. aggiungere anche body-post e footer-post*/
+    //TODO 1. aggiungere anche body-post e footer-post
 
     const bodyPost = document.createElement('div')
     bodyPost.className = 'body-post'
@@ -134,13 +135,15 @@ window.addEventListener('load', (event) => {
     
     
 })
+*/
+
 
 
 // esercizio 2.1: creare lista di posts
 // 2.2 aggiungere il like
 // 2.3 il medesimo esercizio potrebbe essere fatto utilizzando il "map" al posto del foreach
 // 2.3 NOTA container.append([article, article, article, article])
-/*
+
 window.addEventListener('load', (event) => {
 
     const container = document.getElementById('posts-container')
@@ -158,16 +161,61 @@ window.addEventListener('load', (event) => {
         const userNameElem = document.createElement('h4')
         userNameElem.textContent = post.userName
 
-        /!*TODO 1. aggiungere anche body-post e footer-post*!/
+        //!*TODO 1. aggiungere anche body-post e footer-post*!/
 
+        const profileImg = document.createElement('img')
+        profileImg.className = 'img-Profile'
+        profileImg.src = post.userImage
+
+        const body = document.createElement('img')
+        body.className = 'body-post'
+        body.src= post.postImage
+
+        const footer = document.createElement('footer')
+        footer.className = 'footer-post'
+        
+    
+
+        const commentContainer = document.createElement('comment')
+        commentContainer.className= 'comment-container'
+
+        const userCommentImg = document.createElement('img')
+        userCommentImg.className = 'cImg-Profile'
+        userCommentImg.src = post.comments.userImageC
+
+        const userComments = document.createElement('UserComment')
+        userComments.className = 'comment-container'
+        userComments.textContent = post.comments.userNameC  
+
+        const commentText = document.createElement('cText')
+        commentText.className = 'comment-container'
+        commentText.textContent = post.comments.text
+
+        const lowerSvg = document.createElement('svg')
+        lowerSvg.className = 'lowerSvg-container'
+        lowerSvg.src = './img/CommentSection.svg'
+
+        headerPost.appendChild(profileImg)
         headerPost.appendChild(userNameElem)
 
         article.appendChild(headerPost)
+        article.appendChild(body)
 
         container.appendChild(article)
+
+        article.appendChild(footer)
+        
+        footer.appendChild(lowerSvg)
+        commentContainer.appendChild(userCommentImg)
+        commentContainer.appendChild(userComments)
+        commentContainer.appendChild(commentText)
+
+
+        footer.appendChild(commentContainer)
+
     })
 })
-*/
+
 
 
 
